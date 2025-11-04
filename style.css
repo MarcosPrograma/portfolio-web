@@ -1,0 +1,455 @@
+/* --- Importación de fuentes --- */
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700&family=Roboto:wght@400;500&display=swap');
+
+/* --- Variables globales --- */
+:root {
+    --color-dark: #222831;
+    --color-medium: #393E46;
+    --color-light: #EEEEEE;
+    --color-accent: #4FBDBA;
+    --color-white: #FFFFFF;
+    
+    --font-heading: "Public Sans", sans-serif;
+    --font-body: "Roboto", sans-serif;
+}
+
+/* --- Reseteo y estilos globales --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-dark);
+    background-color: var(--color-light);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+h1 { font-size: 2.8rem; }
+h2 { font-size: 2.2rem; text-align: center; margin-bottom: 2.5rem; }
+h3 { font-size: 1.25rem; }
+
+p {
+    font-family: var(--font-body);
+    margin-bottom: 1rem;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-accent);
+    transition: opacity 0.3s ease;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.container-sm {
+    max-width: 800px; 
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* --- Componentes Reutilizables  */
+.btn, .btn-outline {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px; 
+    font-family: var(--font-body);
+    font-weight: 500;
+    text-transform: capitalize;
+    font-size: 1rem;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn {
+    background-color: var(--color-accent);
+    color: var(--color-dark); 
+}
+.btn:hover {
+    background-color: var(--color-medium);
+    color: var(--color-light);
+    opacity: 1;
+}
+
+.btn-outline {
+    border-color: var(--color-accent);
+    color: var(--color-light);
+    background-color: transparent;
+}
+.btn-outline:hover {
+    background-color: var(--color-accent);
+    color: var(--color-dark);
+    opacity: 1;
+}
+
+/* ------------- Header --------------- */
+header {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-light);
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+}
+
+.nav-menu li {
+    margin: 0 1rem;
+}
+
+.nav-menu a {
+    color: var(--color-light);
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+.nav-menu a:hover {
+    color: var(--color-accent);
+    opacity: 1;
+}
+
+.menu-toggle {
+    display: none; 
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--color-light);
+    cursor: pointer;
+}
+
+/* ---------- Presentacion ----------- */
+#hero {
+    background-color: var(--color-light);
+    color: var(--color-dark);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4rem 1rem;
+    min-height: 85vh;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+    border: 5px solid var(--color-white);
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+#hero h1 {
+    margin-bottom: 0.5rem;
+}
+
+#hero p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    color: #555; 
+}
+
+/* ------------- sobre mi ----------- */
+#acerca-de {
+    background-color: var(--color-medium);
+    color: var(--color-light);
+    padding: 4rem 1rem;
+}
+
+#acerca-de h2 {
+    color: var(--color-light);
+}
+
+#acerca-de p {
+    color: var(--color-light);
+    opacity: 0.9;
+}
+
+/* ------------ servicios ------------ */
+#servicios {
+    background-color: var(--color-light);
+    color: var(--color-dark);
+    padding: 4rem 1rem;
+}
+
+#servicios h2 {
+    color: var(--color-light);
+}
+
+.service-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.service-cards .card {
+    background-color: var(--color-medium);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.card-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--color-accent);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-dark);
+}
+
+.card-icon svg {
+    width: 28px;
+    height: 28px;
+    transform: rotate(-90deg);
+}
+
+.service-cards .card h3 {
+    color: var(--color-light);
+}
+
+.service-cards .card p {
+    color: var(--color-light);
+    opacity: 0.8;
+    font-size: 0.9rem;
+}
+
+/* -------- Proyectos -------- */
+#proyectos {
+    background-color: var(--color-medium);
+    color: var(--color-light);
+    padding: 4rem 1rem;
+}
+
+.project-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+}
+
+.project-card {
+    background-color: var(--color-white);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.project-card-text {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; 
+}
+
+.project-card-text h3 {
+    color: var(--color-dark);
+}
+
+.project-card-text p {
+    color: #555;
+    font-size: 0.9rem;
+    flex-grow: 1;
+    margin-bottom: 1rem;
+}
+
+.project-link {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--color-accent);
+    color: var(--color-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    align-self: flex-end; 
+}
+
+.project-link img{
+    width: 40px;
+    height: 40px;
+}
+
+.project-link:hover {
+    background-color: var(--color-medium);
+    color: var(--color-light);
+    opacity: 1;
+}
+
+/* ----------- Trabajemos juntos ----------- */
+#cta {
+    background-color: var(--color-light);
+    text-align: center;
+    padding: 4rem 1rem;
+}
+
+/* ----------- FOOTER ----------- */
+footer {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    padding: 2rem 1rem;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; 
+    gap: 1rem;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-links a {
+    color: var(--color-dark);
+    background-color: var(--color-accent); /* Círculos claros como en la imagen */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-heading);
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+.social-links a:hover {
+    background-color: var(--color-light);
+    opacity: 1;
+}
+
+
+/* ----------- Media Queries ----------- */
+
+@media (max-width: 768px) {
+    h1 { font-size: 2.2rem; }
+    h2 { font-size: 1.8rem; }
+
+    /* --- Navegación Móvil --- */
+    .nav-menu {
+        display: none; 
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--color-medium);
+        position: absolute; 
+        top: 68px; 
+        left: 0;
+        padding: 1rem 0;
+    }
+
+    .nav-menu.active {
+        display: flex; 
+    }
+
+    .nav-menu li {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-menu li a {
+        display: block;
+        padding: 1rem;
+    }
+
+    .menu-toggle {
+        display: block; 
+    }
+
+    .btn-outline {
+        display: none; 
+    }
+
+
+    #hero {
+        min-height: auto;
+        padding: 3rem 1rem;
+    }
+    #hero p br {
+        display: none; 
+    }
+
+    /* --- Footer --- */
+    footer .container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-cards {
+        grid-template-columns: 1fr;
+    }
+    .project-cards {
+        grid-template-columns: 1fr;
+    }
+}
