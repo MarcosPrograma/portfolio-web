@@ -8,6 +8,7 @@
     --color-light: #EEEEEE;
     --color-accent: #4FBDBA;
     --color-white: #FFFFFF;
+    --color-black: #101010;
     
     --font-heading: "Public Sans", sans-serif;
     --font-body: "Roboto", sans-serif;
@@ -84,10 +85,11 @@ a:hover {
     font-family: var(--font-body);
     font-weight: 500;
     text-transform: capitalize;
-    font-size: 1rem;
+    font-size: 1.2rem;
     border: 2px solid transparent;
     cursor: pointer;
     transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 .btn {
@@ -223,7 +225,7 @@ header nav {
 }
 
 #servicios h2 {
-    color: var(--color-light);
+    color: var(--color-dark);
 }
 
 .service-cards {
