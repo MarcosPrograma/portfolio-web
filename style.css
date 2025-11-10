@@ -9,7 +9,7 @@
     --color-accent: #4FBDBA;
     --color-white: #FFFFFF;
     --color-black: #101010;
-    
+
     --font-heading: "Public Sans", sans-serif;
     --font-body: "Roboto", sans-serif;
 }
@@ -32,15 +32,27 @@ body {
     line-height: 1.6;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: var(--font-heading);
     font-weight: 700;
     margin-bottom: 1rem;
 }
 
-h1 { font-size: 2.8rem; }
-h2 { font-size: 2.2rem; text-align: center; margin-bottom: 2.5rem; }
-h3 { font-size: 1.25rem; }
+h1 {
+    font-size: 2.8rem;
+}
+
+h2 {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
 
 p {
     font-family: var(--font-body);
@@ -65,23 +77,24 @@ a:hover {
 }
 
 .container {
-    max-width: 80%; 
+    max-width: 80%;
     margin: 0 auto;
     padding: 0 1rem;
 }
 
 .container-sm {
-    max-width: 80%; 
+    max-width: 80%;
     margin: 0 auto;
     padding: 0 1rem;
     line-height: 2.5rem;
 }
 
 /* --- Componentes Reutilizables  */
-.btn, .btn-outline {
+.btn,
+.btn-outline {
     display: inline-block;
     padding: 0.75rem 1.5rem;
-    border-radius: 50px; 
+    border-radius: 50px;
     font-family: var(--font-body);
     font-weight: 500;
     text-transform: capitalize;
@@ -89,13 +102,14 @@ a:hover {
     border: 2px solid transparent;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .btn {
     background-color: var(--color-accent);
-    color: var(--color-dark); 
+    color: var(--color-dark);
 }
+
 .btn:hover {
     background-color: var(--color-medium);
     color: var(--color-light);
@@ -107,6 +121,7 @@ a:hover {
     color: var(--color-light);
     background-color: transparent;
 }
+
 .btn-outline:hover {
     background-color: var(--color-accent);
     color: var(--color-dark);
@@ -121,7 +136,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 header nav {
@@ -153,13 +168,14 @@ header nav {
     font-weight: 800;
     font-size: 1rem;
 }
+
 .nav-menu a:hover {
     color: var(--color-accent);
     opacity: 1;
 }
 
 .menu-toggle {
-    display: none; 
+    display: none;
     background: none;
     border: none;
     font-size: 2rem;
@@ -187,8 +203,15 @@ header nav {
     object-fit: cover;
     margin-bottom: 1.5rem;
     border: 5px solid var(--color-white);
-    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
+
+.profile-pic:hover {
+    transform: scale(1.2);
+    transition: all 0.3s ease;
+}
+
 
 #hero h1 {
     margin-bottom: 0.5rem;
@@ -198,7 +221,7 @@ header nav {
     font-size: 1.1rem;
     margin-bottom: 2rem;
     max-width: 600px;
-    color: #555; 
+    color: #555;
 }
 
 /* ------------- sobre mi ----------- */
@@ -286,7 +309,7 @@ header nav {
 .project-card {
     background-color: var(--color-white);
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -302,7 +325,7 @@ header nav {
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
-    flex-grow: 1; 
+    flex-grow: 1;
 }
 
 .project-card-text h3 {
@@ -327,10 +350,10 @@ header nav {
     justify-content: center;
     font-size: 1.5rem;
     font-weight: bold;
-    align-self: flex-end; 
+    align-self: flex-end;
 }
 
-.project-link img{
+.project-link img {
     width: 40px;
     height: 40px;
 }
@@ -359,7 +382,7 @@ footer .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     gap: 1rem;
 }
 
@@ -376,7 +399,8 @@ footer p {
 
 .social-links a {
     color: var(--color-dark);
-    background-color: var(--color-accent); /* Círculos claros como en la imagen */
+    background-color: var(--color-accent);
+    /* Círculos claros como en la imagen */
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -387,6 +411,7 @@ footer p {
     font-weight: bold;
     font-size: 0.9rem;
 }
+
 .social-links a:hover {
     background-color: var(--color-light);
     opacity: 1;
@@ -396,23 +421,37 @@ footer p {
 /* ----------- Media Queries ----------- */
 
 @media (max-width: 768px) {
-    h1 { font-size: 2.2rem; }
-    h2 { font-size: 1.8rem; }
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
 
     /* --- Navegación Móvil --- */
+    .container {
+        max-width: 90%;
+    }
+
+    .container-sm {
+        max-width: 90%;
+    }
+
     .nav-menu {
-        display: none; 
+        display: none;
         flex-direction: column;
         width: 100%;
         background-color: var(--color-medium);
-        position: absolute; 
-        top: 68px; 
+        position: absolute;
+        top: 68px;
+
         left: 0;
         padding: 1rem 0;
     }
 
     .nav-menu.active {
-        display: flex; 
+        display: flex;
     }
 
     .nav-menu li {
@@ -427,11 +466,11 @@ footer p {
     }
 
     .menu-toggle {
-        display: block; 
+        display: block;
     }
 
     .btn-outline {
-        display: none; 
+        display: none;
     }
 
 
@@ -439,8 +478,9 @@ footer p {
         min-height: auto;
         padding: 3rem 1rem;
     }
+
     #hero p br {
-        display: none; 
+        display: none;
     }
 
     /* --- Footer --- */
@@ -454,6 +494,7 @@ footer p {
     .service-cards {
         grid-template-columns: 1fr;
     }
+
     .project-cards {
         grid-template-columns: 1fr;
     }
