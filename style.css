@@ -336,16 +336,18 @@ header nav {
 .project-filter-menu button.active {
     background-color: var(--color-accent);
     color: var(--color-dark);
-    
+
 }
 
 .project-card {
-    transition: opacity .3s ease, transform .3s ease;
+    opacity: 1;
+    transform: translateY(0);
+    animation: fadeUp .45s ease forwards;
 }
 
 .project-card.hide {
     opacity: 0;
-    transform: scale(.85);
+    transform: translateY(15px);
     pointer-events: none;
     order: 99;
     display: none;
@@ -368,7 +370,7 @@ header nav {
 }
 
 .project-cards .project-card {
-    order: 1; 
+    order: 1;
 }
 
 .project-card img {
@@ -473,6 +475,18 @@ footer p {
     opacity: 1;
 }
 
+/* ----------- Keyframes ----------- */
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 /* ----------- Media Queries ----------- */
 
@@ -537,6 +551,29 @@ footer p {
 
     #hero p br {
         display: none;
+    }
+
+    .project-filter-menu {
+        gap: 0.6rem;
+        padding: 0.5rem 0;
+        overflow-x: auto;
+        white-space: nowrap;
+        scrollbar-width: none;
+    }
+
+    .project-filter-menu::-webkit-scrollbar {
+        display: none;
+    }
+
+    .project-filter-menu button {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.85rem;
+        border-width: 1.5px;
+    }
+
+    .project-cards {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        justify-content: center;
     }
 
     /* --- Footer --- */
