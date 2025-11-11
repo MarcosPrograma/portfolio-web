@@ -300,10 +300,62 @@ header nav {
     padding: 4rem 1rem;
 }
 
+.project-filter {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.project-filter-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem 1.2rem;
+    list-style: none;
+    justify-content: center;
+}
+
+.project-filter-menu button {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-light);
+    background-color: transparent;
+    padding: 0.6rem 1.2rem;
+    border-radius: 25px;
+    border: 2px solid var(--color-accent);
+    cursor: pointer;
+    transition: all 0.25s ease;
+    font-family: var(--font-heading);
+    letter-spacing: 0.5px;
+}
+
+.project-filter-menu button:hover {
+    background-color: var(--color-accent);
+    color: var(--color-dark);
+    transform: translateY(-2px);
+}
+
+.project-filter-menu button.active {
+    background-color: var(--color-accent);
+    color: var(--color-dark);
+    
+}
+
+.project-card {
+    transition: opacity .3s ease, transform .3s ease;
+}
+
+.project-card.hide {
+    opacity: 0;
+    transform: scale(.85);
+    pointer-events: none;
+    order: 99;
+    display: none;
+}
+
 .project-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     gap: 1.5rem;
+    transition: opacity .25s ease, transform .25s ease;
 }
 
 .project-card {
@@ -313,6 +365,10 @@ header nav {
     overflow: hidden;
     display: flex;
     flex-direction: column;
+}
+
+.project-cards .project-card {
+    order: 1; 
 }
 
 .project-card img {

@@ -15,7 +15,8 @@
         <nav class="container">
             <a class="logo">Marcos Juárez Agüero</a>
             <ul class="nav-menu">
-                <li><a href="src/cv_juarez_aguero.pdf" target="_blank" rel="noopener noreferrer">Currículum Vitae</a></li>
+                <li><a href="src/cv_juarez_aguero.pdf" target="_blank" rel="noopener noreferrer">Currículum Vitae</a>
+                </li>
                 <li><a href="#servicios">Servicios</a></li>
                 <li><a href="#proyectos">Proyectos</a></li>
                 <li><a href="#acerca-de">Acerca de</a></li>
@@ -65,7 +66,8 @@
                     Desde abril de 2025 me desempeño como Diseñador Multimedial en el Área de Museo, Exposiciones y
                     Conservación del Patrimonio de la Facultad de Artes (UNLP), donde diseño, desarrollo e implemento
                     herramientas digitales y experiencias interactivas de mediación cultural, utilizando diversas
-                    tecnologías. También participo en proyectos interdisciplinarios vinculados a la difusión y conservación del
+                    tecnologías. También participo en proyectos interdisciplinarios vinculados a la difusión y
+                    conservación del
                     patrimonio cultural, así como en instancias de investigación sobre las colecciones del acervo.
                 </p>
             </div>
@@ -120,8 +122,17 @@
         <section id="proyectos">
             <div class="container">
                 <h2>Proyectos</h2>
+                <div class="project-filter">
+                    <ul class="project-filter-menu">
+                        <li><button data-filter="todos" class="active">Todos</button></li>
+                        <li><button data-filter="uxui">UX/UI</button></li>
+                        <li><button data-filter="grafico">Gráfico</button></li>
+                        <li><button data-filter="web">Web</button></li>
+                        <li><button data-filter="dev">Desarrollo</button></li>
+                    </ul>
+                </div>
                 <div class="project-cards">
-                    <div class="project-card">
+                    <div class="project-card" data-category="uxui web dev">
                         <img src="src/project-card-1.svg" alt="Vista previa del proyecto Crónicas de Pasteur">
                         <div class="project-card-text">
                             <h3>Crónicas de Pasteur</h3>
@@ -132,7 +143,7 @@
                                     src="src/project-link.svg" alt="Ver proyecto"></a>
                         </div>
                     </div>
-                    <div class="project-card">
+                    <div class="project-card" data-category="uxui web">
                         <img src="src/project-card-2.svg" alt="Vista previa del proyecto Rolling Stone Colombia">
                         <div class="project-card-text">
                             <h3>Rolling Stone Colombia</h3>
@@ -144,7 +155,7 @@
                                 target="_blank"><img src="src/project-link.svg" alt="Ver proyecto"></a>
                         </div>
                     </div>
-                    <div class="project-card">
+                    <div class="project-card" data-category="uxui web">
                         <img src="src/project-card-3.svg" alt="Vista previa del proyecto VINO TECA">
                         <div class="project-card-text">
                             <h3>VINO-TECA</h3>
@@ -155,7 +166,7 @@
                                     src="src/project-link.svg" alt="Ver proyecto"></a>
                         </div>
                     </div>
-                    <div class="project-card">
+                    <div class="project-card" data-category="grafico">
                         <img src="src/project-card-4.svg" alt="Vista previa del proyecto Graciela Lacoste">
                         <div class="project-card-text">
                             <h3>Graciela Lacoste</h3>
@@ -166,7 +177,7 @@
                                     src="src/project-link.svg" alt="Ver proyecto"></a>
                         </div>
                     </div>
-                    <div class="project-card">
+                    <div class="project-card" data-category="grafico">
                         <img src="src/project-card-5.svg" alt="Vista previa del proyecto Cucusitas">
                         <div class="project-card-text">
                             <h3>Cucusita’s</h3>
@@ -203,12 +214,7 @@
         </div>
     </footer>
 
-    <script>
-        document.querySelector('.menu-toggle').addEventListener('click', () => {
-            document.querySelector('.nav-menu').classList.toggle('active');
-        });
-    </script>
-
+    <script src="main.js"></script>
 </body>
 
 </html>
