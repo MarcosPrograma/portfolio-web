@@ -423,6 +423,10 @@ header nav {
     opacity: 1;
 }
 
+.project-link:hover img {
+    content: url("src/project-link-white.svg");
+}
+
 /* ----------- Trabajemos juntos ----------- */
 #cta {
     background-color: var(--color-light);
@@ -512,11 +516,12 @@ footer p {
     .nav-menu {
         display: none;
         flex-direction: column;
+        align-items: center;
         width: 100%;
+        height: 100vh;
         background-color: var(--color-medium);
         position: absolute;
         top: 68px;
-
         left: 0;
         padding: 1rem 0;
     }
@@ -543,7 +548,6 @@ footer p {
     .btn-outline {
         display: none;
     }
-
 
     #hero {
         min-height: auto;
@@ -591,5 +595,51 @@ footer p {
 
     .project-cards {
         grid-template-columns: 1fr;
+    }
+}
+
+/* ------------------- Dispositivos horizontales ------------------- */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--color-medium);
+        position: absolute;
+        top: 58px;
+        left: 0;
+        padding: 1rem 0;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu li {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-menu li a {
+        display: block;
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .btn-outline {
+        display: none;
+    }
+
+    header {
+        padding: 0.5rem 0;
+    }
+
+    .logo {
+        font-size: 1.2rem;
     }
 }

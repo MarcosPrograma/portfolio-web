@@ -1,6 +1,16 @@
 // Toggle menú hamburguesa
-document.querySelector('.menu-toggle').addEventListener('click', () => {
-    document.querySelector('.nav-menu').classList.toggle('active');
+const menuToggle = document.querySelector('.menu-toggle');
+const navMenu = document.querySelector('.nav-menu');
+
+menuToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+});
+
+// Cerrar menú al hacer clic en cualquier link
+document.querySelectorAll('.nav-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+    });
 });
 
 // Selección de elementos
